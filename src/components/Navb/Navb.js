@@ -44,9 +44,9 @@ function Navb() {
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to="stu">
                 Students
-              </a>
+              </Link>
             </li>
             
             <li>

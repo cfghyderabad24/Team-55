@@ -8,9 +8,10 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import RootLayout from './components/Routing/RootLayout';
 import Home from './components/Content/Home';
 import Register from './components/Content/Register';
-import Techno from './components/Content/Techno';
+import Techno from './components/Content/Extra/Techno';
 import Login from './components/Content/Login';
 import EventList from './components/Content/EventList';
+import Students from './components/Users/Students';
 
 
 function App() {
@@ -46,8 +47,8 @@ function App() {
           element:<Login/>
         },
         {
-          path:'eve',
-          element:<EventList/>
+          path:'/stu',
+          element:<Students/>
         }
       ]
     },
