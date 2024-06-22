@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Students.css'; 
 
 // Mock Data
 const learningModules = [
@@ -38,9 +39,9 @@ const StudentDashboard = () => {
     <div className="dashboard">
       <nav>
         <ul>
-          <li onClick={() => setCurrentView('modules')}>Learning Modules</li>
-          <li onClick={() => setCurrentView('challenges')}>Coding Challenges</li>
-          <li onClick={() => setCurrentView('tutorials')}>Tutorials</li>
+          <li><button onClick={() => setCurrentView('modules')}>Learning Modules</button></li>
+          <li><button onClick={() => setCurrentView('challenges')}>Coding Challenges</button> </li>
+          <li><button onClick={() => setCurrentView('tutorials')}>Tutorials</button></li>
         </ul>
       </nav>
       
