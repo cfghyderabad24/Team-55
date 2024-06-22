@@ -1,0 +1,47 @@
+POST http://localhost:4000/userapi/user
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"raju",
+    "password":"raju",
+    "email":"raju@gmail.com"
+
+}
+
+###
+POST http://localhost:4000/adminapi/addproduct
+Content-Type: application/json
+
+{
+    "producttype":"cb",
+    "name":"book8",
+    "price":"1234",
+    "description":"huuggggvgvgvg"
+}
+###
+
+POST http://localhost:4000/otherapi/payment
+Content-Type: application/json
+
+{
+    "email":"lodavoj233@lisoren.com",
+    "name":"ram",
+    "product":"book1",
+    "orderdate":"2023-06-22T12:30:00.000Z",
+    "reciveddate":"2024-06-22T12:30:00.000Z",
+    "status":"delivered",
+    "price":"890"
+}
+
+###
+POST http://localhost:4000/adminapi/login
+Content-Type: application/json
+
+{
+   "username":"vikram",
+   "password":"vikram"
+}
+
+
+
