@@ -6,7 +6,7 @@ import React, {useState,useEffect} from 'react'
 // import Counter from './components/Counter/Counter.js'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import RootLayout from './components/Routing/RootLayout';
-import Home from './components/Content/Home';
+import Home from './components/home/Home';
 import Register from './components/Content/Register';
 import Techno from './components/Content/Extra/Techno';
 import Login from './components/Content/Login';
@@ -15,6 +15,7 @@ import Students from './components/Users/Students';
 import Ngo from './components/Users/Ngo';
 import Princi from './components/Users/Princi';
 import Admin from './components/Users/Admin'
+import Chatbot from './components/Chatbot/Chatbot';
 
 
 function App() {
@@ -68,6 +69,10 @@ function App() {
           path:'admin',
           element:<Admin/>
 
+        },
+        {
+          path:'Bot',
+          element: <Chatbot />
         }
       ]
     },

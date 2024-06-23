@@ -115,7 +115,7 @@ function Princi() {
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
                 <Card.Text><strong>{product.price}</strong></Card.Text>
-                <Button variant="primary" onClick={() => addToCart(product)}>Add to Cart</Button>
+                <Button variant="primary" onClick={() => addToCart(product)}>Buy Now</Button>
               </Card.Body>
             </Card>
           ))}

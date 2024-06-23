@@ -60,8 +60,8 @@ function Navb() {
           </ul>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="eve">
-            Events
+          <Link className="nav-link" to="Bot">
+            ChatBot
           </Link>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
-import 'chart.js/auto'
+import 'chart.js/auto';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,7 +9,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Admin.css';
 
-const Admin= () => {
+const Admin = () => {
   const [barChartData, setBarChartData] = useState({
     labels: [],
     datasets: [],
@@ -85,21 +85,26 @@ const Admin= () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch('http://localhost:000/api/products', { // Adjust the URL to your backend endpoint
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newProduct),
-    });
+    try {
+      const response = await fetch('http://localhost:4000/adminapi/addproduct', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newProduct),
+      });
 
-    if (response.ok) {
-      console.log('Product added successfully');
-      // Optionally, you can reset the form or show a success message
-      setNewProduct({ id: '', name: '', price: '' });
-    } else {
-      console.error('Failed to add product');
-      // Optionally, handle the error
+      if (response.ok) {
+        console.log('Product added successfully');
+        setNewProduct({ id: '', name: '', price: '' });
+      } else {
+        const errorData = await response.json();
+        console.error('Failed to add product:', errorData);
+        alert(`Failed to add product: ${errorData.message || 'Unknown error'}`);
+      }
+    } catch (error) {
+      console.error('Error during fetch:', error);
+      alert('Error during fetch: ' + error.message);
     }
   };
 
@@ -108,7 +113,7 @@ const Admin= () => {
       <Row className="justify-content-center mt-4">
         <Col md={8}>
           <Card className="mb-4">
-            <h1 >Admin</h1>
+            <h1>Admin</h1>
             <Card.Header as="h5">Sales Analysis</Card.Header>
             <Card.Body>
               {barChartData && barChartData.datasets.length > 0 ? (
