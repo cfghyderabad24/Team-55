@@ -1,0 +1,41 @@
+.carousel-section {
+    margin: 2rem 0;
+  }
+  
+  .carousel-image {
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover;
+    z-index: 1; 
+  }
+  
+  .benefits-section {
+    margin: 2rem 0;
+  }
+  
+  .benefits-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .benefits-section li {
+    margin: 0.5rem 0;
+  }
+  
+  .products-section {
+    margin: 2rem 0;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-list .card {
+    margin: 1rem;
+  }
+  
+  .product-image {
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+  }
