@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Card.css'
 const EventCard = ({ event }) => {
     return (
-        <div className="elist col-md-auto mb-3 ">
+        <div className="col-md-auto mb-3 ">
             <div className="card shadow">
                 <img src={event.image} className="card-img-top" alt={event.title} />
                 <div className="card-body">

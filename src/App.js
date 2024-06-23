@@ -12,6 +12,9 @@ import Techno from './components/Content/Extra/Techno';
 import Login from './components/Content/Login';
 import EventList from './components/Content/EventList';
 import Students from './components/Users/Students';
+import Ngo from './components/Users/Ngo';
+import Princi from './components/Users/Princi';
+import Admin from './components/Users/Admin'
 
 
 function App() {
@@ -49,6 +52,22 @@ function App() {
         {
           path:'/stu',
           element:<Students/>
+        },
+        {
+          path:'ngo',
+          element:<Ngo/>
+
+        },
+        {
+          path:'princi',
+          element:<Princi/>
+
+        },
+        ,
+        {
+          path:'admin',
+          element:<Admin/>
+
         }
       ]
     },

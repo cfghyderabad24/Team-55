@@ -55,7 +55,7 @@ const Register = () => {
     <Container maxWidth="sm">
       <Box sx={{ mt: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Register
+          Login
         </Typography>
         <form onSubmit={handleSubmit}>
           <TextField
@@ -69,17 +69,7 @@ const Register = () => {
             error={errors.username}
             helperText={errors.username ? 'Username is required or already taken' : ''}
           />
-          <TextField
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-            required
-            error={errors.name}
-            helperText={errors.name ? 'Name is required' : ''}
-          />
+          
           <TextField
             label="Password"
             name="password"
@@ -93,7 +83,7 @@ const Register = () => {
             helperText={errors.password ? 'Password is required' : ''}
           />
           <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
-            Register
+            Login
           </Button>
         </form>
       </Box>

@@ -1,8 +1,10 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate=useNavigate()
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -37,7 +39,10 @@ const Login = () => {
                     />
                     {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
                 </div>
-                <button type="submit" className="btn btn-primary w-100">Login</button>
+                <button type="submit" className="btn btn-primary w-100" onClick={()=>{
+                    navigate('/admin');
+
+                }}>Login</button>
             </form>
         </div>
     );

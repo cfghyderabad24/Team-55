@@ -11,14 +11,14 @@ function Navb() {
 
   return (
     <div>
-      <ul className="nav justify-content-end nav-underline bg-dark-subtle">
+      <ul className="nav justify-content-evenly nav-underline bg-dark-subtle">
         <li className="nav-item">
           <Link className="nav-link" aria-current="page" to="">
             Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="register">
+          <Link className="nav-link" to="login">
             Admin
           </Link>
         </li>
@@ -34,14 +34,14 @@ function Navb() {
           </a>
           <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to="ngo">
                 NGO's
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <Link className="dropdown-item" to="princi">
                 School Principles
-              </a>
+              </Link>
             </li>
             <li>
               <Link className="dropdown-item" to="stu">

@@ -1,0 +1,4 @@
+.dropdown{
+    
+    z-index: 2; /* Ensures the navbar is above the image */
+  }
