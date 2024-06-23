@@ -3,11 +3,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Ngo.css';
-import Img1 from '../images/prof.jpeg';
-import Img2 from '../images/prof.jpeg';
-import Img3 from '../images/prof.jpeg';
-import ProductImg1 from "../images/prof.jpeg";
-import ProductImg2 from "../images/prof.jpeg";
+import Img1 from "../images/ngo_img1.png";
+import Img2 from '../images/ngo_img2.png';
+import Img3 from '../images/ngo_img3.png';
+import ProductImg1 from "../images/ProductImg1.png";
+import ProductImg2 from "../images/ProductImg2.png";
 import Order from './Order';
 
 function Ngo() {
@@ -40,13 +40,7 @@ function Ngo() {
       price: "$89.99",
       image: ProductImg2
     },
-    {
-      id: 5,
-      name: "Coding Puzzle Game",
-      description: "A puzzle game designed to enhance logical thinking and coding skills.",
-      price: "$29.99",
-      image: ProductImg1
-    },
+    
   ];
 
   const [selectedProduct, setSelectedProduct] = useState(null);
