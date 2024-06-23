@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Ngo.css'; // Ensure you have Principal.css in the correct location
-import Img1 from '../images/prof.jpeg'
-import Img2 from '../images/prof.jpeg'
-import Img3 from '../images/prof.jpeg'
+import Img1 from '../images/cfg_pic1.jpg';
+import Img2 from '../images/cfg_pic2.jpg';
+import Img3 from '../images/cfg_pic3.jpg';
 
 
 function Princi() {
@@ -39,13 +39,7 @@ function Princi() {
       price: "$79.99",
       image:Img2
     },
-    {
-      id: 5,
-      name: "Data Analytics Tools",
-      description: "Tools for analyzing student data and improving academic outcomes.",
-      price: "$149.99",
-      image: Img1
-    }
+  
   ];
 
   const addToCart = (product) => {
